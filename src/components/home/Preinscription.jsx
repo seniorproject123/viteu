@@ -105,16 +105,17 @@ const Preinscription = () => {
       <div className="mx-auto grid max-w-screen-xl lg:grid-cols-5 gap-6">
         <div className="mx-auto my-4 lg:col-span-3 ">
           <h1 className="py-2 text-3xl font-bold sm:text-xl md:text-2xl">
-          Pré-inscrivez vous dès maintenant
+          Pour participer aux évènements
           </h1>
           <p className="font-bold text-5xl sm:text-4xl md:text-5xl pb-3.5">
-          Gagnez 1 mois gratuit !
+          Remplissez le formulaire d'inscription !
           </p>
           <div className="mt-6 max-w-screen-sm space-y-3 pt-3.5">
-            <p>C'est simple, remplissez vos <b>informations personnelles et professionnelles</b> dans le <b>formulaire de préinscription.</b></p>
+            <p>C'est simple, remplissez vos <b>informations personnelles et professionnelles</b> dans le <b>formulaire d'inscription.</b></p>
             <p>Attendez la validation de votre profil.</p>
-            <p>Recevez en exclusivité une <b>invitation</b> pour le lancement de l'application et suivez nous sur les réseaux sociaux.</p>
-            <p><b>Connectez-vous</b> dès l'ouverture de l'application et faites partie des 100 premiers inscrits pour bénéficier d'un mois gratuit ! </p>
+            <p>Vous receverez également en exclusivité une <b>invitation</b> pour le lancement de l'application.</p>
+            <p>N'oubliez pas de nous suivre sur les réseaux sociaux ! </p>
+            {/* <p><b>Connectez-vous</b> dès l'ouverture de l'application et faites partie des 100 premiers inscrits pour bénéficier d'un mois gratuit ! </p> */}
           </div>
         </div>
         <div className="mx-auto my-4 lg:col-span-2">
