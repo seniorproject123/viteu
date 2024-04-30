@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import LogoSA from '../../assets/logo-saa.png';
 
-const Navbar = ({navColor="text-white"}) => {
+const Navbar = ({navColor}) => {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
@@ -10,9 +11,11 @@ const Navbar = ({navColor="text-white"}) => {
   };
 
   return (
-    <div className={`p-4 flex h-24 max-w-screen-xl items-center justify-between ${navColor} text-2xl font-bold`}>
-      {/* <ReactLogo type="spin" size={48} /> */}
-      <div className="hidden md:flex ">
+    <div className={`p-4 flex h-24 max-w-screen-xl items-center justify-between text-gray-900 dark:text-white ${navColor} text-2xl font-bold`}>
+      {/* <ReactLogo size={48} /> */}
+      <Link to="/"><img className="header-link" width={120} height={120} src={LogoSA} alt="Logo"/></Link>
+      <div className="hidden md:flex">
+        <p className="header-link"><Link to="/">Accueil</Link></p>
         <p className="header-link"><Link to="/blog">Articles & Blog</Link></p>
         <p className="header-link"><Link to="/conseil">Conseils & Coaching</Link></p>
         <p className="header-link"><Link to="/prestige">Apéros Prestige</Link></p>

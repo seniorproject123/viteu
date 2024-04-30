@@ -9,6 +9,7 @@ import Prestige from "./components/Prestige";
 import Blog from "./components/blog/Blog";
 import Blog2 from "./components/blog/Blog2";
 import Plus from "./components/home/Plus";
+import Preinscription from "./components/home/Preinscription";
 import "./index.css";
 
 
@@ -19,6 +20,7 @@ function App() {
       <Route path="/faq" element={<Faq />} />
       {/* <Route path="/data-react-tailwind/coaching" element={<Coach />} /> */}
       <Route path="/plus" element={<Plus />} />
+      <Route path="/#preinscription" element={<Preinscription />} />
       <Route path="/conseil" element={<Conseil />} />
       <Route path="/prestige" element={<Prestige />} />
       <Route path="/condition-utilisation" element={<ConditionUtilisation />} />

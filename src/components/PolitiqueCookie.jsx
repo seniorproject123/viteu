@@ -9,7 +9,7 @@ function PolitiqueCookie() {
       <Navbar />
       <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <h1 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Politique des cookies</h1>
-        <div className="container mx-auto px-4 py-8 text-white">
+        <div className="container mx-auto px-4 py-8 dark:text-white">
           <p className="mb-4">Bienvenue chez Saaje, où la transparence et la clarté dans la gestion de vos données sont au cœur de nos préoccupations. Cette page a pour objectif de vous guider à travers nos pratiques en matière de cookies et de vous offrir des moyens simples pour les gérer.</p>
           <p className="mb-4">Si vous maîtrisez déjà les rouages des cookies et souhaitez simplement ajuster vos paramètres, vous pouvez à tout moment mettre à jour vos préférences et personnaliser davantage vos choix de confidentialité dans les paramètres de votre compte sur notre application.</p>
 
@@ -85,8 +85,7 @@ function PolitiqueCookie() {
           </p>
 
           <h2 className="text-3xl font-bold mb-4">Comment Nous Contacter ?</h2>
-          <p className="mb-4">Si vous avez des questions concernant cette Politique relative à l'utilisation des cookies, vous pouvez envoyer un mail à contact@saaje.app.
-          </p>
+          <p className="mb-4">Si vous avez des questions concernant cette Politique relative à l'utilisation des cookies, vous pouvez envoyer un mail à contact@saaje.app</p>
        
         </div>
       </div>

@@ -40,7 +40,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h6 className="font-medium text-gray-400"><Link to="/faq">FAQ</Link></h6>
+          <h6 className="font-medium text-gray-400" onClick={scrollToTop}><Link to="/faq">FAQ</Link></h6>
         </div>
       </div>
     </footer>

@@ -9,7 +9,7 @@ function Blog() {
       <Navbar />
       <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <h1 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Confidentialité des données</h1>
-        <div className="container mx-auto px-4 py-8 text-white">
+        <div className="container mx-auto px-4 py-8 dark:text-white">
           <p className="mb-4">Chez Saaje, nous accordons une priorité absolue à la protection et à la confidentialité de vos données. Cette préoccupation guide notre travail à chaque étape, de la conception initiale jusqu'au développement final de nos services.</p>
           <p className="mb-4">Afin de garantir une compréhension approfondie de vos droits et de nos engagements, nous vous recommandons de lire attentivement cette politique en parallèle avec nos Conditions Générales d'Utilisation.</p>
   

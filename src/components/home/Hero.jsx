@@ -1,8 +1,13 @@
 import React from "react";
+import BgDark from "../../assets/bg-dark.jpg";
 
 const Hero = () => {
+  const bgImageStyle = {
+    backgroundImage: `url(${BgDark})`
+  };
   return (
-    <div className="w-full bg-cover bg-[url('src/assets/bg-dark.jpg')]">
+    <div className="w-full bg-cover" style={bgImageStyle}>
+    {/* <div className="w-full bg-cover bg-[url('src/assets/bg-dark.jpg')]"> */}
       <div className="top-0 mx-auto mt-[-96px] flex h-screen w-full max-w-screen-xl flex-col items-center justify-center text-center text-white">
         <h1 className="text-5xl sm:text-7xl md:text-9xl font-black font-cinzel">
           SAAJE

@@ -11,7 +11,7 @@ const Coach = () => {
             Notre savoir-faire
           </p>
           <h1 className="mt-2 text-2xl font-bold text-black sm:text-3xl md:text-6xl">
-            Nous sommes coach en séduction.
+            Nous sommes coachs en séduction.
           </h1>
           <p className="mt-2 text-black">
             Profitez de conseils personnalisés et de séances de coaching pour enrichir votre parcours. 

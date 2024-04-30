@@ -19,7 +19,7 @@ const Preinscription = () => {
     }
 
     if(typeof formFields["name"] !== "undefined"){
-      if(!formFields["name"].match(/^[a-zA-Z]+$/)){
+      if(!formFields["name"].match(/^[-A-zÀ-ÖØ-öø-ÿ_ ]*$/)){
         formIsValid = false;
         formErrors["name"] = "Juste des lettres";
       }       
@@ -31,10 +31,10 @@ const Preinscription = () => {
     }
 
     if(typeof formFields["prenom"] !== "undefined"){
-      if(!formFields["prenom"].match(/^[a-zA-Z]+$/)){
+      if(!formFields["prenom"].match(/^[-A-zÀ-ÖØ-öø-ÿ_ ]*$/)){
         formIsValid = false;
         formErrors["prenom"] = "Juste des lettres";
-      }       
+      }
     }
 
      //Prenom
@@ -44,10 +44,10 @@ const Preinscription = () => {
     }
 
     if(typeof formFields["profession"] !== "undefined"){
-      if(!formFields["profession"].match(/^[a-zA-Z]+$/)){
+      if(!formFields["profession"].match(/^[-A-zÀ-ÖØ-öø-ÿ_ ]*$/)){
         formIsValid = false;
         formErrors["profession"] = "Juste des lettres";
-      }       
+      }
     }
 
     //Email
@@ -111,8 +111,7 @@ const Preinscription = () => {
           Gagnez 1 mois gratuit !
           </p>
           <div className="mt-6 max-w-screen-sm space-y-3 pt-3.5">
-            <p>
-            C'est simple, remplissez vos <b>informations personnelles et professionnelles</b> dans le <b>formulaire de préinscription.</b></p>
+            <p>C'est simple, remplissez vos <b>informations personnelles et professionnelles</b> dans le <b>formulaire de préinscription.</b></p>
             <p>Attendez la validation de votre profil.</p>
             <p>Recevez en exclusivité une <b>invitation</b> pour le lancement de l'application et suivez nous sur les réseaux sociaux.</p>
             <p><b>Connectez-vous</b> dès l'ouverture de l'application et faites partie des 100 premiers inscrits pour bénéficier d'un mois gratuit ! </p>

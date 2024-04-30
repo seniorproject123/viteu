@@ -10,11 +10,11 @@ import Preinscription from "./home/Preinscription";
 const Home = () => {
   return (
     <div className="bg-gray-950">
-      <Navbar />
+      <Navbar navColor={"text-white"}/>
       <Hero />
+      <Preinscription />
       <Gain />
       <Coach />
-      <Preinscription />
       <Cards />
       <Footer />
     </div>

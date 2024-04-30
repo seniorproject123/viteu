@@ -17,7 +17,7 @@ const Gain = () => {
         <div className="flex flex-col items-end justify-center max-w-lg mt-14 col-start-4 col-end-7">
           <p className="my-2 text-black">
           Chaque profil est attentivement choisi, vous offrant ainsi l'opportunité 
-          de sélectionner par professions et de participer à des rencontres prestigieuses, 
+          de sélectionner <b>par professions</b> et de participer à des rencontres prestigieuses, 
           que ce soit en ligne ou en personne.
           </p>
           <div className="self-start">

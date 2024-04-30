@@ -14,7 +14,7 @@ function Blog() {
     <Navbar />
     <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
 
-  <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased">
+  <main className="pt-4 pb-16 lg:pt-8 lg:pb-24 bg-white dark:bg-gray-900 antialiased">
   <div className="flex justify-between px-4 mx-auto max-w-screen-xl ">
       <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
         <header className="mb-4 lg:mb-6 not-format">
@@ -23,8 +23,8 @@ function Blog() {
                     <img className="mr-4 w-16 h-16 rounded-full" src={ProfilePicture} alt="Equipe SAAJE"/>
                     <div>
                         <a href="#" rel="author" className="text-xl font-bold text-gray-900 dark:text-white">Équipe SAAJE</a>
-                        <p className="text-base text-gray-500 dark:text-gray-400">Coach en seduction</p>
-                        <p className="text-base text-gray-500 dark:text-gray-400"><time dateTime="2022-02-08" title="February 8th, 2022">15 fev. 2024</time></p>
+                        <p className="text-base text-gray-500 dark:text-gray-400">Coach en séduction</p>
+                        {/* <p className="text-base text-gray-500 dark:text-gray-400"><time dateTime="2022-02-08" title="February 8th, 2022">15 fev. 2024</time></p> */}
                     </div>
                 </div>
             </div>
