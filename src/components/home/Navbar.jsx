@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import LogoSA from '../../assets/logo-saa.png';
+import LogoSA from "../../assets/logo-saa.png";
 
-const Navbar = ({navColor}) => {
+const Navbar = ({ navColor }) => {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
@@ -11,14 +11,32 @@ const Navbar = ({navColor}) => {
   };
 
   return (
-    <div className={`p-4 flex h-24 max-w-screen-xl items-center justify-between text-gray-900 dark:text-white ${navColor} text-2xl font-bold`}>
+    <div
+      className={`flex h-24 max-w-screen-xl items-center justify-between p-4 text-gray-900 dark:text-white ${navColor} text-2xl font-bold`}
+    >
       {/* <ReactLogo size={48} /> */}
-      <Link to="/"><img className="header-link" width={120} height={120} src={LogoSA} alt="Logo"/></Link>
+      <Link to="/">
+        <img
+          className="header-link"
+          width={120}
+          height={120}
+          src={LogoSA}
+          alt="Logo"
+        />
+      </Link>
       <div className="hidden md:flex">
-        <p className="header-link"><Link to="/">Accueil</Link></p>
-        <p className="header-link"><Link to="/blog">Articles & Blog</Link></p>
-        <p className="header-link"><Link to="/conseil">Conseils & Coaching</Link></p>
-        <p className="header-link"><Link to="/prestige">Apéros Prestige</Link></p>
+        <p className="header-link">
+          <Link to="/">Accueil</Link>
+        </p>
+        <p className="header-link">
+          <Link to="/blog">Articles & Blog</Link>
+        </p>
+        <p className="header-link">
+          <Link to="/conseil">Conseils & Coaching</Link>
+        </p>
+        <p className="header-link">
+          <Link to="/prestige">Apéros Privilège</Link>
+        </p>
       </div>
 
       <div onClick={handleNav} className="block md:hidden">
@@ -32,13 +50,17 @@ const Navbar = ({navColor}) => {
             : "fixed left-[-100vw]"
         }
       >
-        <h1 className="m-4 w-full text-3xl font-bold text-purple-950">
-          SAAJE
-        </h1>
+        <h1 className="m-4 w-full text-3xl font-bold text-purple-950">SAAJE</h1>
         <ul>
-          <li className="header-link"><Link to="/blog">Articles & Blog</Link></li>
-          <li className="header-link"><Link to="/conseil">Conseils & Coaching</Link></li>
-          <li className="header-link"><Link to="/prestige">Apéros Prestige</Link></li>
+          <li className="header-link">
+            <Link to="/blog">Articles & Blog</Link>
+          </li>
+          <li className="header-link">
+            <Link to="/conseil">Conseils & Coaching</Link>
+          </li>
+          <li className="header-link">
+            <Link to="/prestige">Apéros Privilège</Link>
+          </li>
         </ul>
       </div>
     </div>
