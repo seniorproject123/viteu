@@ -85,7 +85,7 @@ const Preinscription = () => {
       formIsValid = false;
       formErrors["known"] = "Ne peut être vide";
     }
-    console.log(formErrors);
+
     setErrors(formErrors);
     return formIsValid;
   };
@@ -115,6 +115,7 @@ const Preinscription = () => {
             console.log("FAILED...", error.text);
           },
         );
+      window.scroll({ top: 500, left: 0, behavior: "smooth" });
     }
   };
 
