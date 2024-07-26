@@ -57,10 +57,18 @@ function Prestige() {
                   <td className="border px-8 py-4">Apéro privilège </td>
                   <td className="border px-8 py-4"> 14 mai 2024</td>
                 </tr>
-                <td className="border px-8 py-4">
-                  Apéro cocktails & rencontres{" "}
-                </td>
+                </tr>
+                <td className="border px-8 py-4">Apéro cocktails & rencontres{" "} </td>
                 <td className="border px-8 py-4"> 11 juin 2024</td>
+                </tr>    
+                </tr>        
+                <td className="border px-8 py-4">Apéro rencontres sur Paris{" "} </td>
+                <td className="border px-8 py-4"> 27 juin 2024</td>
+                </tr>
+                </div>
+                <td className="border px-8 py-4">Apéro de rentrée{" "} </td>
+                <td className="border px-8 py-4"> 5 septembre 2024</td>
+                </tr>
               </tbody>
             </table>
           </div>
