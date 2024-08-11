@@ -1,6 +1,6 @@
 // src/components/Popup.js
 import React from "react";
-import "./index.css";
+import "../../index.css";
 
 const Popup = ({ onClose }) => (
   <div className="popup-overlay">
