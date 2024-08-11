@@ -24,19 +24,23 @@ class CardInfo {
 }
 
 const Card = ({ cardInfo, index }) => {
-const titleColors = ['text-[#DF07F8]', 'text-[#F80798]', 'text-[#6707F8]'];
-const color = titleColors[index % titleColors.length]; // Get color based on index
-const badges = ['1 mois', '3 mois', '6 mois'];
-const badge = badges[index % badges.length];
+  const titleColors = ["text-[#DF07F8]", "text-[#F80798]", "text-[#6707F8]"];
+  const color = titleColors[index % titleColors.length]; // Get color based on index
+  const badges = ["1 mois", "3 mois", "6 mois"];
+  const badge = badges[index % badges.length];
 
   return (
     <div className="my-4 w-full rounded-xl p-8 shadow-2xl duration-300 hover:scale-105">
       {/* <img src={cardInfo.imageSource} alt="" className="mx-auto w-20" /> */}
-      <span className="px-4 py-1 font-semibold text-white text-sm bg-[#45064F] rounded-full">{badge}</span>
-      <h2 className={`py-8 text-center text-2xl font-bold ${color}`}>{cardInfo.title}</h2>
+      <span className="rounded-full bg-[#45064F] px-4 py-1 text-sm font-semibold text-white">
+        {badge}
+      </span>
+      <h2 className={`py-8 text-center text-2xl font-bold ${color}`}>
+        {cardInfo.title}
+      </h2>
       <p className="text-center text-4xl font-bold">{cardInfo.price}</p>
       <div className="mt-8 font-medium">
-        <ol className="pl-4 list-disc">
+        <ol className="list-disc pl-4">
           <li>{cardInfo.fonction1}</li>
           {cardInfo.fonction2 && <li>{cardInfo.fonction2}</li>}
           {cardInfo.fonction3 && <li>{cardInfo.fonction3}</li>}
@@ -53,30 +57,28 @@ const Cards = () => {
     new CardInfo(
       GroupAccountImage,
       "SAAJE EXPLORER",
-      39,
+      49,
       "Likes illimités",
       "Retours en arrière illimités",
-      "Aucune publicité",
     ),
     new CardInfo(
       PartnershipImage,
       "SAAJE PRIVILÈGE",
-      29,
+      39,
       "Fonctionnalités SAAJE EXPLORER",
       "Savoir qui a liké votre profil",
-      "3 Superlikes et 1 coup de cœur par semaine",
-      "1 Boost de profil offert chaque mois"
+      "3 Superlikes par semaine",
+      "1 Boost de profil offert chaque mois",
     ),
     new CardInfo(
       SingleUserImage,
       "SAAJE ÉLITE",
-      19,
+      29,
       "Fonctionnalités SAAJE PRIVILÈGE",
-      "Likez en priorité et voir les Likes que vous avez envoyé au cours des 7 derniers jours",
-      "Envoyez un message avant de matcher"
+      "Voir les Likes que vous avez envoyé au cours des 7 derniers jours",
+      "Envoyez un message avant de matcher",
     ),
   ];
-
 
   return (
     <div className="w-full bg-white px-4 py-10">
