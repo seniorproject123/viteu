@@ -50,6 +50,18 @@ const Preinscription = () => {
       }
     }
 
+    //Ville
+    if (!formFields["ville"]) {
+      formIsValid = false;
+      formErrors["ville"] = "Ne peut être vide";
+    }
+    if (typeof formFields["ville"] !== "undefined") {
+      if (!formFields["ville"].match(/^[-A-zÀ-ÖØ-öø-ÿ_ ]*$/)) {
+        formIsValid = false;
+        formErrors["s"] = "Juste des lettres";
+      }
+    }
+
     //Email
     if (!formFields["email"]) {
       formIsValid = false;
@@ -227,6 +239,23 @@ const Preinscription = () => {
                         htmlFor="Profession"
                         className="block text-sm font-medium leading-6"
                       >
+                        Ville
+                      </label>
+                      <div className="mt-2">
+                        <input
+                          type="text"
+                          name="birthdate"
+                          id="birthdate"
+                          autoComplete="family-name"
+                          className="block w-full rounded-md border-0 py-1.5 pl-[14px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        />
+                      </div>
+                    </div>
+                    <div className="sm:col-span-full">
+                      <label
+                        htmlFor="ville"
+                        className="block text-sm font-medium leading-6"
+                      >
                         Profession
                       </label>
                       <div className="mt-2">
@@ -280,7 +309,7 @@ const Preinscription = () => {
                         htmlFor="email"
                         className="block text-sm font-medium leading-6"
                       >
-                        Adresse e-mail
+                        Adresse mail
                       </label>
                       <div className="mt-2">
                         <input
@@ -342,7 +371,7 @@ const Preinscription = () => {
                         <input
                           type="text"
                           name="known"
-                          placeholder="Instagram, Facebook, Site internet"
+                          placeholder="Instagram, Facebook, LinkedIn, Site internet"
                           id="known"
                           autoComplete="family-name"
                           onChange={(e) =>

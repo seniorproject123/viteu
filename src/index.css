@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,4 +15,77 @@
   .navbar-link {
     @apply border-b border-gray-800 p-4 hover:cursor-pointer hover:underline;
   }
+}
+
+.popup-overlay {
+  @apply fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50;
+}
+
+.popup-content {
+  @apply relative flex w-full max-w-2xl flex-col items-center rounded-lg bg-[#45064f] p-4 text-white shadow-lg md:flex-row md:p-8;
+}
+
+.close-button {
+  @apply absolute right-4 top-4 cursor-pointer border-none bg-transparent text-2xl text-white;
+}
+
+.popup-image {
+  @apply mb-4 w-full max-w-sm md:mb-0 md:mr-4 md:w-1/2;
+}
+
+.popup-image img {
+  @apply h-auto w-full rounded-lg object-contain;
+}
+
+.popup-text {
+  @apply text-left;
+}
+
+.popup-title {
+  @apply mb-4 text-2xl font-bold;
+}
+
+.popup-message {
+  @apply text-base;
+}
+
+@media (max-width: 480px) {
+  .popup-content {
+    @apply p-4;
+  }
+
+  .popup-title {
+    @apply text-xl;
+  }
+
+  .popup-message {
+    @apply text-sm;
+  }
+
+  .popup-image {
+    @apply max-w-xs;
+  }
+}
+
+@media (max-width: 480px) {
+  .popup-content {
+    @apply p-4;
+  }
+
+  .popup-image {
+    @apply max-w-xs md:max-w-sm;
+  }
+
+  .popup-title {
+    @apply text-xl;
+  }
+
+  .popup-message {
+    @apply text-sm;
+  }
+}
+
+html,
+body {
+  @apply overflow-y-auto overflow-x-hidden;
 }

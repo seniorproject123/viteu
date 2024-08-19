@@ -14,7 +14,6 @@ const Navbar = ({ navColor }) => {
     <div
       className={`flex h-24 max-w-screen-xl items-center justify-between p-4 text-gray-900 dark:text-white ${navColor} text-2xl font-bold`}
     >
-      {/* <ReactLogo size={48} /> */}
       <Link to="/">
         <img
           className="header-link"
@@ -24,12 +23,12 @@ const Navbar = ({ navColor }) => {
           alt="Logo"
         />
       </Link>
-      <div className="hidden md:flex">
+      <div className="hidden space-x-4 md:flex">
         <p className="header-link">
           <Link to="/">Accueil</Link>
         </p>
         <p className="header-link">
-          <Link to="/blog">Articles & Blog</Link>
+          <Link to="/blog1">Articles & Blog</Link>
         </p>
         <p className="header-link">
           <Link to="/conseil">Conseils & Coaching</Link>
@@ -51,14 +50,14 @@ const Navbar = ({ navColor }) => {
         }
       >
         <h1 className="m-4 w-full text-3xl font-bold text-purple-950">SAAJE</h1>
-        <ul>
-          <li className="header-link">
-            <Link to="/blog">Articles & Blog</Link>
+        <ul className="flex flex-col p-4">
+          <li className="header-link mb-4">
+            <Link to="/blog1">Articles & Blog</Link>
           </li>
-          <li className="header-link">
+          <li className="header-link mb-4">
             <Link to="/conseil">Conseils & Coaching</Link>
           </li>
-          <li className="header-link">
+          <li className="header-link mb-4">
             <Link to="/prestige">Apéros Privilège</Link>
           </li>
         </ul>

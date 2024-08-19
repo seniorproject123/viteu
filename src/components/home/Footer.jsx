@@ -1,5 +1,7 @@
 import React from "react";
 import { FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -41,6 +43,14 @@ const Footer = () => {
               <form method="GET" className="pr-1 duration-300 hover:scale-110">
                 <button formAction="https://www.instagram.com/saaje.app">
                   <FaInstagramSquare size={36} />
+                </button>
+              </form>
+              <form method="GET" className="pr-1 duration-300 hover:scale-110">
+                <button formAction="https://www.linkedin.com/company/saajeappdating">
+                  <FontAwesomeIcon
+                    icon={faLinkedin}
+                    style={{ height: "36px", width: "36px" }}
+                  />
                 </button>
               </form>
             </div>

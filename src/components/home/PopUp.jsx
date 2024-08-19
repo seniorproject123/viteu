@@ -1,6 +1,7 @@
-// src/components/Popup.js
+// src/components/Popup.jsx
 import React from "react";
-import "../../index.css";
+import ImagePopUp from "/images/ImagePopUp.jpg";
+import "../../index.css"; // Assure-toi que ce chemin est correct
 
 const Popup = ({ onClose }) => (
   <div className="popup-overlay">
@@ -8,13 +9,18 @@ const Popup = ({ onClose }) => (
       <button className="close-button" onClick={onClose}>
         &times;
       </button>
-      <p>
-        SAAJE sera bientôt disponible en application téléchargeable sur votre
-        mobile
-      </p>
-      {coucou}
+      <div className="popup-image">
+        <img src={ImagePopUp} alt="SAAJE app" />
+      </div>
+      <div className="popup-text">
+        <h2 className="popup-title">SURPRISE 👀</h2>
+        <p className="popup-message">
+          SAAJE sera bientôt disponible en application sur votre mobile. Restez
+          connecté pour ne rien manquer !
+        </p>
+      </div>
     </div>
   </div>
 );
 
-export default PopUp;
+export default Popup;
