@@ -58,7 +58,7 @@ const Preinscription = () => {
     if (typeof formFields["ville"] !== "undefined") {
       if (!formFields["ville"].match(/^[-A-zÀ-ÖØ-öø-ÿ_ ]*$/)) {
         formIsValid = false;
-        formErrors["s"] = "Juste des lettres";
+        formErrors["ville"] = "Juste des lettres";
       }
     }
 
@@ -236,7 +236,7 @@ const Preinscription = () => {
                     </div>
                     <div className="sm:col-span-full">
                       <label
-                        htmlFor="Profession"
+                        htmlFor="ville"
                         className="block text-sm font-medium leading-6"
                       >
                         Ville
@@ -244,16 +244,20 @@ const Preinscription = () => {
                       <div className="mt-2">
                         <input
                           type="text"
-                          name="birthdate"
-                          id="birthdate"
+                          name="ville"
+                          id="ville"
                           autoComplete="family-name"
+                          onChange={(e) =>
+                            handleChange("ville", e.target.value)
+                          }
+                          value={fields["ville"]}
                           className="block w-full rounded-md border-0 py-1.5 pl-[14px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         />
                       </div>
                     </div>
                     <div className="sm:col-span-full">
                       <label
-                        htmlFor="ville"
+                        htmlFor="profession"
                         className="block text-sm font-medium leading-6"
                       >
                         Profession
