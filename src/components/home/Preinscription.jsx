@@ -58,7 +58,7 @@ const Preinscription = () => {
     if (typeof formFields["ville"] !== "undefined") {
       if (!formFields["ville"].match(/^[-A-zÀ-ÖØ-öø-ÿ_ ]*$/)) {
         formIsValid = false;
-        formErrors["s"] = "Juste des lettres";
+        formErrors["ville"] = "Juste des lettres";
       }
     }
 
@@ -230,23 +230,9 @@ const Preinscription = () => {
                           placeholder="jj/mm/aaaa"
                           id="birthdate"
                           autoComplete="family-name"
-                          className="block w-full rounded-md border-0 py-1.5 pl-[14px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        />
-                      </div>
-                    </div>
-                    <div className="sm:col-span-full">
-                      <label
-                        htmlFor="Profession"
-                        className="block text-sm font-medium leading-6"
-                      >
-                        Ville
-                      </label>
-                      <div className="mt-2">
-                        <input
-                          type="text"
-                          name="birthdate"
-                          id="birthdate"
-                          autoComplete="family-name"
+                          inputMode="numeric"
+                          pattern="\d{2}/\d{2}/\d{4}"
+                          maxLength="10"
                           className="block w-full rounded-md border-0 py-1.5 pl-[14px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         />
                       </div>
@@ -254,6 +240,27 @@ const Preinscription = () => {
                     <div className="sm:col-span-full">
                       <label
                         htmlFor="ville"
+                        className="block text-sm font-medium leading-6"
+                      >
+                        Ville
+                      </label>
+                      <div className="mt-2">
+                        <input
+                          type="text"
+                          name="ville"
+                          id="ville"
+                          autoComplete="family-name"
+                          onChange={(e) =>
+                            handleChange("ville", e.target.value)
+                          }
+                          value={fields["ville"]}
+                          className="block w-full rounded-md border-0 py-1.5 pl-[14px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        />
+                      </div>
+                    </div>
+                    <div className="sm:col-span-full">
+                      <label
+                        htmlFor="profession"
                         className="block text-sm font-medium leading-6"
                       >
                         Profession
@@ -315,7 +322,6 @@ const Preinscription = () => {
                         <input
                           id="mail"
                           name="mail"
-                          placeholder=""
                           type="email"
                           autoComplete="email"
                           onChange={(e) =>
