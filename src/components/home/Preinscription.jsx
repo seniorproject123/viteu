@@ -6,13 +6,25 @@ const Preinscription = () => {
   const [formSent, setFormSent] = useState(false);
   const [fields, setFields] = useState({});
   const [errors, setErrors] = useState({});
+  const [birthdate, setBirthdate] = useState("");
+
+  const handleInputChange = (e) => {
+    let value = e.target.value.replace(/\D/g, ""); // Enlever tout sauf les chiffres
+    if (value.length > 2) {
+      value = value.slice(0, 2) + "/" + value.slice(2);
+    }
+    if (value.length > 5) {
+      value = value.slice(0, 5) + "/" + value.slice(5);
+    }
+    setBirthdate(value); // Mettre à jour l'état avec la valeur formatée
+  };
 
   const handleValidation = () => {
-    const formFields = { ...fields };
+    const formFields = { ...fields, birthdate };
     const formErrors = {};
     let formIsValid = true;
 
-    //Name
+    // Name
     if (!formFields["name"]) {
       formIsValid = false;
       formErrors["name"] = "Ne peut être vide";
@@ -24,7 +36,8 @@ const Preinscription = () => {
         formErrors["name"] = "Juste des lettres";
       }
     }
-    //Prenom
+
+    // Prenom
     if (!formFields["prenom"]) {
       formIsValid = false;
       formErrors["prenom"] = "Ne peut être vide";
@@ -37,7 +50,14 @@ const Preinscription = () => {
       }
     }
 
-    //Profession
+    // Birthdate
+    if (!birthdate.match(/^\d{2}\/\d{2}\/\d{4}$/)) {
+      formIsValid = false;
+      formErrors["birthdate"] =
+        "La date de naissance doit être au format jj/mm/aaaa.";
+    }
+
+    // Profession
     if (!formFields["profession"]) {
       formIsValid = false;
       formErrors["profession"] = "Ne peut être vide";
@@ -50,7 +70,7 @@ const Preinscription = () => {
       }
     }
 
-    //Ville
+    // Ville
     if (!formFields["ville"]) {
       formIsValid = false;
       formErrors["ville"] = "Ne peut être vide";
@@ -62,7 +82,7 @@ const Preinscription = () => {
       }
     }
 
-    //Email
+    // Email
     if (!formFields["email"]) {
       formIsValid = false;
       formErrors["email"] = "Ne peut être vide";
@@ -78,21 +98,21 @@ const Preinscription = () => {
           lastAtPos > 0 &&
           formFields["email"].indexOf("@@") == -1 &&
           lastDotPos > 2 &&
-          fields["email"].length - lastDotPos > 2
+          formFields["email"].length - lastDotPos > 2
         )
       ) {
         formIsValid = false;
-        formFields["email"] = "Email non valide";
+        formErrors["email"] = "Email non valide";
       }
     }
 
-    //Société
+    // Société
     if (!formFields["society"]) {
       formIsValid = false;
       formErrors["society"] = "Ne peut être vide";
     }
 
-    //Comment nous avez-vous connu
+    // Comment nous avez-vous connu
     if (!formFields["known"]) {
       formIsValid = false;
       formErrors["known"] = "Ne peut être vide";
@@ -109,11 +129,10 @@ const Preinscription = () => {
     });
   };
 
-  const contactSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (handleValidation()) {
       setFormSent(true);
-      e.preventDefault();
 
       emailjs
         .sendForm("service_x0jtanh", "template_bna2kty", form.current, {
@@ -159,12 +178,7 @@ const Preinscription = () => {
         <div className="mx-auto my-4 lg:col-span-2">
           <div className="flex w-full flex-col items-center justify-between sm:flex-row">
             {!formSent ? (
-              <form
-                name="form"
-                ref={form}
-                id="form"
-                onSubmit={(e) => contactSubmit(e)}
-              >
+              <form name="form" ref={form} id="form" onSubmit={handleSubmit}>
                 <div className="border-b border-gray-900/10 pb-12">
                   <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-6">
                     <div className="sm:col-span-3">
@@ -185,7 +199,6 @@ const Preinscription = () => {
                           value={fields["name"]}
                           className="block w-full rounded-md border-0 py-1.5 pl-[14px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         />
-                        {/* <input type="text" id="username-error" class="bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400" placeholder="Bonnie Green"> */}
                         <span className="error mt-2 text-sm text-red-600 dark:text-red-500">
                           {errors["name"]}
                         </span>
@@ -228,14 +241,17 @@ const Preinscription = () => {
                           type="text"
                           name="birthdate"
                           placeholder="jj/mm/aaaa"
-                          id="birthdate"
-                          autoComplete="family-name"
-                          inputMode="numeric"
-                          pattern="\d{2}/\d{2}/\d{4}"
+                          value={birthdate}
+                          onChange={handleInputChange}
                           maxLength="10"
                           className="block w-full rounded-md border-0 py-1.5 pl-[14px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         />
                       </div>
+                      {errors["birthdate"] && (
+                        <span className="text-sm text-red-500">
+                          {errors["birthdate"]}
+                        </span>
+                      )}
                     </div>
                     <div className="sm:col-span-full">
                       <label
@@ -395,7 +411,7 @@ const Preinscription = () => {
                 </div>
                 <button
                   type="submit"
-                  className="mb-6 w-[200px] rounded-xl bg-white px-6 py-3 font-bold text-black 
+                  className="mb-6 w-[200px] rounded-xl bg-white px-6 py-3 font-bold text-black
                         transition  ease-in-out hover:scale-105"
                 >
                   Envoyer

@@ -67,6 +67,10 @@ function Prestige() {
                   <td className="border px-8 py-4">Apéro de rentrée</td>
                   <td className="border px-8 py-4">5 septembre 2024</td>
                 </tr>
+                <tr>
+                  <td className="border px-8 py-4">Apéro réseautage</td>
+                  <td className="border px-8 py-4">fin octobre 2024</td>
+                </tr>
               </tbody>
             </table>
           </div>
