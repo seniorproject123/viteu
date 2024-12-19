@@ -8,11 +8,11 @@ import BlogRecent from "./BlogRecent";
 function Blog() {
   return (
     <>
-      <section className="h-full min-h-screen  bg-white dark:bg-gray-900">
+      <section className="h-full min-h-screen bg-white dark:bg-gray-900">
         <Navbar />
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-16 lg:px-6">
           <main className="bg-white pb-16 pt-4 antialiased lg:pb-24 lg:pt-8 dark:bg-gray-900">
-            <div className="left-between mx-auto flex max-w-screen-xl px-4 ">
+            <div className="left-between mx-auto flex max-w-screen-xl px-4">
               <article className="format format-sm sm:format-base lg:format-lg format-blue dark:format-invert mx-auto w-full max-w-2xl">
                 <header className="not-format mb-4 lg:mb-6">
                   <div className="mb-6 flex items-center not-italic">

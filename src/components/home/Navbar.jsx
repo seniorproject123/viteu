@@ -28,7 +28,7 @@ const Navbar = ({ navColor }) => {
           <Link to="/">Accueil</Link>
         </p>
         <p className="header-link">
-          <Link to="/blog1">Articles & Blog</Link>
+          <Link to="/articles-recents">Articles & Blog</Link>
         </p>
         <p className="header-link">
           <Link to="/conseil">Conseils & Coaching</Link>
@@ -52,7 +52,7 @@ const Navbar = ({ navColor }) => {
         <h1 className="m-4 w-full text-3xl font-bold text-purple-950">SAAJE</h1>
         <ul className="flex flex-col p-4">
           <li className="header-link mb-4">
-            <Link to="/blog1">Articles & Blog</Link>
+            <Link to="/articles-recents">Articles & Blog</Link>
           </li>
           <li className="header-link mb-4">
             <Link to="/conseil">Conseils & Coaching</Link>
