@@ -1,63 +1,64 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8" lang="fr" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; font-src https://fonts.gstatic.com; img-src 'self'; script-src 'self';"> -->
-    <!-- Content-Security-Policy: default-src 'none';  http://localhost:3000; manifest-src 'self' http://localhost:3000; -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline';"> -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src 'self';font-src 'self'; img-src 'self' data: https:; style-src 'self' ; script-src 'self' https://fonts.gstatic.com;"> -->
-
-    <!-- Start Single Page Apps for GitHub Pages -->
-    <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      // This script checks to see if a redirect is present in the query string,
-      // converts it back into the correct url and adds it to the
-      // browser's history using window.history.replaceState(...),
-      // which won't cause the browser to attempt to load the new url.
-      // When the single page app is loaded further down in this file,
-      // the correct url will be waiting in the browser's history for
-      // the single page app to route accordingly.
-      (function (l) {
-        if (l.search[1] === "/") {
-          var decoded = l.search
-            .slice(1)
-            .split("&")
-            .map(function (s) {
-              return s.replace(/~and~/g, "&");
-            })
-            .join("?");
-          window.history.replaceState(
-            null,
-            null,
-            l.pathname.slice(0, -1) + decoded + l.hash,
-          );
-        }
-      })(window.location);
-    </script>
-    <!-- End Single Page Apps for GitHub Pages -->
-
-    <link rel="icon" href="./favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Votre rencontre privilégiée" />
+
+    <link rel="icon" href="./favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
-
     <link rel="manifest" href="/assets/site-8kkWcAx7.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SAAJE</title>
+
+    <style>
+      /* Style de la bannière Trustpilot */
+      .trustpilot-banner {
+        background-color: #45064f; /* Couleur de fond correspondant à la couleur de la barre inférieure */
+        padding: 20px;
+        text-align: center;
+        color: white;
+      }
+
+      .trustpilot-banner a {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border: 2px solid #ffffff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+
+      .trustpilot-banner a:hover {
+        background-color: #ffffff;
+        color: #45064f;
+      }
+    </style>
     <script type="module" crossorigin src="/assets/index-DC_r7_BV.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-zzaFaF4d.css">
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Simple bannière Trustpilot -->
+    <div class="trustpilot-banner">
+      <a
+        href="https://fr.trustpilot.com/review/saaje.app"
+        target="_blank"
+        rel="noopener"
+      >
+        Consultez nos avis sur Trustpilot
+      </a>
+    </div>
+
   </body>
 </html>
